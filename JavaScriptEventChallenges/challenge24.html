@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Event Challenge 24</title>
+</head>
+<body>
+    <h1>Javascript Event Challenge 24</h1>
+    <div>
+        <p>Here is the first paragraphbof text</p>
+    </div>
+    <button>Add a paragraphs</button>
+
+    <!-- Change the HTML so that there is a
+div around one paragraph. Make it so that when you click the button a
+new paragraph is added to the div, with the text, "A new paragraph" in
+it.
+.-->
+
+    <script>
+        var divTag=document.querySelector('div');
+        var btn=document.querySelector('button');
+
+        btn.addEventListener('click', function(){
+           var newP=document.createElement('p');
+           var pText=document.createTextNode('A new paragraph');
+           newP.appendChild(pText);
+           divTag.appendChild(newP);
+        
+        });
+    </script>
+</body>
+</html>

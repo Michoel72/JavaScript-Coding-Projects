@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Event Challenge 22</title>
+</head>
+<body>
+    <h1>Javascript Event Challenge 22</h1>
+    <p>Here is a paragraph of text</p>
+    <button>Turn Green OK!!!</button>
+
+    <!-- Make an HTML file with a paragraph and a
+    button. When you click the button, make the
+    paragraph turn-->
+
+    <script>
+        var pTag=document.querySelector('p');
+        var btn=document.querySelector('button');
+
+        btn.addEventListener('click', function(){
+            pTag.style.color="green";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Testing Else if selections</h1>
+
+    <script>
+    var colors=['red','green','blue','yellow'];
+    var selectedColor = colors[0];
+
+/*     if (selectedColor=='red') {
+        console.log("The color is red");
+    }
+    else if (selectedColor=='green') {
+        console.log("The color is green");
+    }
+    else if (selectedColor=='blue') {
+        console.log("The color is blue");
+    }
+    else {
+        console.log("The color is yellow")
+    } */
+
+    switch(selectedColor){
+        case "red": console.log("The color is red"); break;
+        case "green": console.log("The color is green"); break;
+        case "blue": console.log("The color is blue"); break;
+        case "yellow": console.log("The color is yellow"); break;
+        default: console.log("there was an error")
+
+    }
+</script>
+
+
+
+</body>
+</html>

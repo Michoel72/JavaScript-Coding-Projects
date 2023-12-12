@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Selections</title>
+</head>
+<body>
+
+    <h1>Strings Sequence 2</h1>
+
+    <script>
+     var myString="I am really Hungry";
+     console.log(myString);
+     var myUpperString=myString.toUpperCase();
+    console.log(myUpperString);
+    var reallyLocation=myString.search('really');
+    console.log(reallyLocation);
+    var specialWorld=myString.substr(reallyLocation, 6)
+    specialWorld=specialWorld.toUpperCase();
+   var newString=myString.replace('really', specialWorld);
+    console.log(newString);
+     
+    </script>

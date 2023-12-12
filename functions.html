@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Functions in JavaScript</h1>
+
+    <script>
+        // PASSING IN DATA
+        function doStuff(){
+
+  
+        var mySTring="Here is a string of text";
+        var upperString=mySTring.toUpperCase();
+        console.log(mySTring);
+        console.log(upperString);
+      }
+      //doStuff();
+
+
+
+    </script>
+    <script>
+        function checkNun(){
+        var userNumber=prompt("Entre a number", "");
+        
+        if(userNumber <10) {
+            console.log('you entered a number less than 10');
+            for (var i=0; i<10; i++) {
+                console.log(`Here is ${i}`);
+            }
+        } 
+        
+        else if(userNumber>9) {
+            console.log("you entered a large number");
+        }
+        else {
+            console.log("ERROR: You did not enter a number");
+
+        }
+    }
+    //checkNun();
+
+    function upperMessage(message){
+        var upperMessage=message.toUpperCase();
+        console.log(upperMessage);
+    }
+    //upperMessage(`here is a message`);
+
+
+
+    function addNums(num1,num2){
+        var sum=num1+num2;
+        console.log(sum);
+    }
+    //addNums(580,698);
+
+    //RETURNING DATA THROUGH VARIABLES
+    function returnSum(num1,num2){
+        var sum=num1+num2;
+        return sum;
+    }
+    //console.log(returnSum(3,5));
+
+
+
+    // Example below will generate a random number between almost 0 and almost 1
+    //console.log(Math.random());
+
+    //what if I wanted a more specific range
+    function randomInt(min,max){
+        var numOfValues=max-min+1;
+        console.log(numOfValues);
+    }
+    //randomInt(5,10);
+
+
+
+    //Generate random number
+    function randomInt(min,max){
+        var numOfValues=max-min+1;
+        var randomNum=Math.random();
+        var randomVal=randomNum*numOfValues;
+
+        console.log(randomVal);
+    }
+    //randomInt(5,10);
+
+
+
+    //round down random number
+    function randomInt(min,max){
+        var numOfValues=max-min+1;
+        var randomNum=Math.random();
+        var randomVal=randomNum*numOfValues;
+        var roundedRandomVal=Math.floor(randomVal);
+        //floor will round down ceil will rounded up
+
+        console.log(roundedRandomVal);
+
+    }
+   // randomInt(5,10);
+
+
+
+   // STill not getting numbers up to twn so...
+
+   function randomInt(min,max){
+        var numOfValues=max-min+1;
+        var randomNum=Math.random();
+        var randomVal=randomNum*numOfValues;
+        var roundedRandomVal=Math.floor(randomVal);
+        //floor will round down ceil will rounded up
+        var finalNum=min+roundedRandomVal;
+
+        console.log(finalNum);
+
+    }
+   // randomInt(5,10);
+
+
+
+    //Instead of just numbers showing up in console, we can retrun something specific
+    var foods=['cheese', 'orange', 'poubelle', 'chaussette']
+
+    function randomInt(min,max){
+        var numOfValues=max-min+1;
+        var randomNum=Math.random();
+        var randomVal=randomNum*numOfValues;
+        var roundedRandomVal=Math.floor(randomVal);
+        //floor will round down ceil will rounded up
+        var finalNum=min+roundedRandomVal;
+
+        return finalNum;
+    }
+     //   console.log(foods[randomInt(0,3)]);
+
+
+
+        //Clean the code and make it more concise
+        var foods=['cheese', 'orange', 'poubelle', 'chaussette']
+
+    function randomInt(min,max){
+       /*see consise below
+        var numOfValues=max-min+1;
+        var randomNum=Math.random();
+        var randomVal=randomNum*numOfValues;
+        var roundedRandomVal=Math.floor(randomVal);
+        var finalNum=min+roundedRandomVal;
+        SEE CONSIZE BELOW */
+
+        return Math.floor((max-min+1)*Math.random())+min;
+    }
+        console.log(foods[randomInt(0,3)]);
+
+        //SIMPLE FUNCTION EXPRESSIONS
+        var greeting=function(){
+            console.log("Hello form the function");
+        }
+        greeting();
+
+    </script>

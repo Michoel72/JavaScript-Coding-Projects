@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Selections</title>
+</head>
+<body>
+
+    <h1>Strings Sequence 2</h1>
+
+    <script>
+
+    var foods=["potato", "orange", "banana", "apricot"];
+    var myString="I am really hungry for some";
+   /* console.log(`${myString} ${foods[0]}`);*/
+
+    for(var i=0; i<foods.length; i++) {
+        //check if the incremator is even
+        if(i%2 === 0) {
+            //if it's even, make the array element upper case
+            console.log(`${myString} ${foods[i].toUpperCase()}`);
+        }
+        else {
+            // if it;s odd, keep it lower case
+            console.log(`${myString} ${foods[i]}`);        
+        }
+    }
+    </script>

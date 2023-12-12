@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capturing Events with JavaScript</title>
+</head>
+<body>
+
+    <h1>Capturing Events with JavaScript</h1>
+
+    <button>Don't Press Me!</button>
+
+    <script>
+
+        var btn=document.querySelector('button');
+
+        function ouch(){
+            alert("I told you not to click the button");
+        }
+        btn.onclick=ouch;
+
+        //OR Instead of all the code above. don't name function
+
+        btn.onclick=function(){
+            alert("I told you not to click the button");
+        }
+
+    </script>
+    </body>
+    </html>

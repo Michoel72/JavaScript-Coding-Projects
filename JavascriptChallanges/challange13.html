@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>JavaScript Basic Challenges: Challenge 10</h1>
+
+    <script>
+    /* For this challenge handle the situation that
+happens if the user clicks cancel on the
+prompt, or does not enter text in the prompt.
+If the user does one of those two actions,
+have the hello() function log to the console
+"You didn't give me your name". Otherwise,
+have the console log the greeting.
+*/
+
+        var yourName=prompt('provide your name','');
+        function hello(name){
+            if(name==null || name==''){
+                console.log("You did not give me a name");
+            }
+            else {
+            console.log(`Hello ${name}, and welcome!`);
+            }
+        }
+        hello(yourName);
+
+    </script>
+</body>
+</html>

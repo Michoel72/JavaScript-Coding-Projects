@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Event Challenge 26</title>
+</head>
+<body>
+    <h1>Javascript Event Challenge 26</h1>
+    <div>
+        <p>Here is the first paragraph of text</p>
+    </div>
+    <button>Add a paragraphs</button>
+    <button>Remove a paragraphs</button>
+
+
+    <!-- change the first paragraph so that it says, "This is paragraph number 1". Each time the user presses the add
+paragraph button, the number at the end of the statement increments. When the user clicks the remove paragraph button, it functions as normal, but alerts the user if they try to delete the last paragraph. -->
+
+    <script>
+       var divTag=document.querySelector('div');
+       var btnAdd=document.querySelectorAll('button')[0];
+       var btnDelete=document.querySelectorAll('button') [1];
+       var numOfPs=1;
+
+       btnAdd.addEventListener('click', function(){
+        numOfPs++;
+        var newP=document.createElement('p');
+        var pText=document.createTextNode(`This is a paragraph number ${numOfPs}`);
+        newP.appendChild(pText);
+        divTag.appendChild(newP);
+       });
+       btnDelete.addEventListener('click', function(){
+        if(numOfPs >1){
+            divTag.removeChild(divTag.children[numOfPs-1]);
+            numOfPs--;
+        }
+        else {
+            alert("don't delete the last paragraph!");
+        }
+       });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM innerHTML</title>
+</head>
+<body>
+
+    <h1>DOM innerHTML</h1>
+    <div id="special">
+        <p>Here is a paragraph</p>
+        <p>Here is another paragraph</p>
+        <p>Here is one more paragraph</p>
+    </div>
+    <script>
+       var myDiv = document.getElementById('special');
+       /*newer method is:
+       var myDiv = document.querySelector('#special');*/
+
+       /*OR one line (a very long one) is:
+       var document.querySelector('#special').innerHTML="<p>Here is my new content</p>"; */
+
+       //below will stick a whole new content and replace all 3 paragraphs
+       myDiv.innerHTML="<p>Here is my new content</p>";
+    </script>
+
+</body>
+
+</html>
