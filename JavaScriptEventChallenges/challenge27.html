@@ -12,10 +12,25 @@
         <input type="submit" value="send number">
     </form>
 
-    <!-- When the user submits a number, change the size of the font for the h1 to be equal to the number they submitted in pixels. If no number is entered, or something other than a number is entered, alert that the user must enter a number. To make this work you will have to prevent the default behavior for the form submission. -->
+    <!-- Add a form. When the user submits a number, change the size of the font for the h1 to be equal to the number they submitted in pixels. If no number is entered, or something other than a number is entered, alert that the user must enter a number. To make this work you will have to prevent the default behavior for the form submission. -->
 
     <script>
-     
+
+     var h1Tag=document.querySelector('h1');
+     var formTag=document.querySelector('form');
+
+     formTag.addEventListener('submit', function(event){
+
+        event.preventDefault();
+        var myNum=parseInt(document.querySelector('input').value);
+
+        if(myNum){
+            h1Tag.style.fontSize=myNum+"px";
+        }
+        else{
+            alert('please enter a number');
+        }
+     });
 
     </script>
 </body>
